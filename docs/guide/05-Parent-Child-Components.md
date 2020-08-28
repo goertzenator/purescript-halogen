@@ -630,7 +630,7 @@ This means the component supports no child components.
 type Slots = ( button :: forall query. H.Slot query Void Unit )
 ```
 
-This means the component supports one type of child component, identified by the symbol `button`. You can't send queries to it (because `q` is an open type variable) and it doesn't emit any output messages (usually represented with `Void` so you can use `absurd` as the handler). You can have at most one of this component because only one value, `unit`, inhabits the `Unit` type.
+This means the component supports one type of child component, identified by the symbol `button`. You can't send queries to it (because `query` is an open type variable) and it doesn't emit any output messages (usually represented with `Void` so you can use `absurd` as the handler). You can have at most one of this component because only one value, `unit`, inhabits the `Unit` type.
 
 ```purs
 type Slots = ( button :: forall query. H.Slot query Button.Output Int )
